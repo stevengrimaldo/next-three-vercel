@@ -34,7 +34,7 @@ export const VERTEX_SHADER = `
 
     gl_Position = projectionMatrix * viewMatrix * mix(_slide, _target, _corners);
   }
-`
+`;
 
 export const FRAGMENT_SHADER = `
   uniform sampler2D u_texture;
@@ -75,4 +75,4 @@ export const FRAGMENT_SHADER = `
 
     gl_FragColor = color;
   }
-`
+`;
