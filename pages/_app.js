@@ -1,7 +1,17 @@
-import '../styles/globals.css'
+import React from 'react'
+import NextApp from 'next/app'
+import { ThemeProvider } from 'styled-components'
+import { GlobalStyles, theme } from '@global'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default class App extends NextApp {
+  render() {
+    const { Component, pageProps } = this.props
+
+    return (
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    )
+  }
 }
-
-export default MyApp
