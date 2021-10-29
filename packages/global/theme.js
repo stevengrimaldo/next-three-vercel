@@ -1,22 +1,22 @@
 // The base value that every setting is calculated from
-const baseValue = 8;
+const baseValue = 8
 
 // grid settings
-const columns = 17;
-const columnWidth = baseValue * 10; // 80
-const gridWidth = columnWidth * columns; // 1360
+const columns = 17
+const columnWidth = baseValue * 10 // 80
+const gridWidth = columnWidth * columns // 1360
 
 // default breakpoints, based off of common devices sizes
-const breakPoints = [320, 375, 480, 667, 768, 960, 1024, 1440, 1600, 1950];
+const breakPoints = [320, 375, 480, 667, 768, 960, 1024, 1440, 1600, 1950]
 
 // 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72
 const fontSizes = Array.from(
   { length: 9 * 2 },
   (x, i) => (i + 1) * (baseValue / 2)
-);
+)
 
 // 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 132, 140
-const spacing = Array.from({ length: 9 * 2 }, (x, i) => (i + 1) * baseValue);
+const spacing = Array.from({ length: 9 * 2 }, (x, i) => (i + 1) * baseValue)
 
 // setting up our size shorthands
 const sizing = Array.from({ length: 9 * 2 }, (x, i) => ({
@@ -24,30 +24,30 @@ const sizing = Array.from({ length: 9 * 2 }, (x, i) => ({
   fs: fontSizes[i],
   lh: fontSizes[i] * 1.5,
   sp: spacing[i],
-}));
+}))
 
 const baseColors = {
   black: '#000000', // black
   transparent: 'transparent', // transparent
   white: '#FFFFFF', // white
-};
+}
 
-const primaryColors = {};
+const primaryColors = {}
 
-const secondaryColors = {};
+const secondaryColors = {}
 
 export const color = {
   ...baseColors,
   ...primaryColors,
   ...secondaryColors,
-};
+}
 
-export const fontFamily = {};
+export const fontFamily = {}
 
 export const fontSize = {
   inherit: 'inherit',
   initial: 'initial',
-};
+}
 
 export const fontStyle = {
   inherit: 'inherit',
@@ -55,7 +55,7 @@ export const fontStyle = {
   italic: 'italic',
   normal: 'normal',
   oblique: 'oblique',
-};
+}
 
 export const fontWeight = {
   black: '900',
@@ -68,7 +68,7 @@ export const fontWeight = {
   medium: '500',
   normal: '400',
   thin: '100',
-};
+}
 
 export const grid = {
   columnWidth: columnWidth, // 80
@@ -77,7 +77,7 @@ export const grid = {
   outerSpacing: baseValue * 3, // 24
   sectionSpacing: baseValue * 10, // 80
   totalColumns: columns, // 17
-};
+}
 
 export const size = {
   lg: sizing[5],
@@ -89,7 +89,7 @@ export const size = {
   xxs: sizing[1],
   xxxl: sizing[8],
   xxxs: sizing[0],
-};
+}
 
 export default {
   color,
@@ -99,4 +99,4 @@ export default {
   fontWeight,
   grid,
   size,
-};
+}

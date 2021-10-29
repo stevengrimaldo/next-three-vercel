@@ -1,27 +1,22 @@
 parser: 'babel-eslint'
 plugins:
   - react
-  - react-hooks
   - prettier
 extends:
   - plugin:react/recommended
   - plugin:prettier/recommended
   - plugin:import/errors
-  - prettier/react
-  - prettier/standard
-settings:
-  import/resolver:
-    alias:
-      extensions: ['.js', '.jsx', '.ts', '.tsx']
-      map:
-        - ['@libs', './packages/libs']
-        - ['@global', './packages/global']
-        - ['@pages', './pages']
+  - next/core-web-vitals
+# settings:
+#   import/resolver:
+#     alias:
+#       map:
+#         - ['@libs', '/packages/libs']
+#         - ['@global', '/packages/global']
 rules:
   prettier/prettier:
     - 2
-    -
-      trailingComma: es5
+    - trailingComma: es5
       singleQuote: true
       semi: false
       bracketSpacing: true
@@ -39,8 +34,7 @@ rules:
   sort-keys: 2
   no-unused-vars:
     - 2
-    -
-      argsIgnorePattern: ^_
+    - argsIgnorePattern: ^_
       varsIgnorePattern: ^_
   comma-dangle:
     - 2
