@@ -9,14 +9,6 @@ extends:
   - plugin:import/errors
   - prettier/react
   - prettier/standard
-settings:
-  import/resolver:
-    alias:
-      extensions: ['.js', '.jsx', '.ts', '.tsx']
-      map:
-        - ['@libs', './packages/libs']
-        - ['@global', './packages/global']
-        - ['@pages', './pages']
 rules:
   prettier/prettier:
     - 2
