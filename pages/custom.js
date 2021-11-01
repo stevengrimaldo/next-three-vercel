@@ -15,6 +15,7 @@ import {
 } from 'three';
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
+import { GUI } from 'three/examples/jsm/libs/dat.gui.module'
 import gsap from 'gsap';
 import {
   FRAGMENT_SHADER,
@@ -122,7 +123,7 @@ class Custom extends Component {
   }
 
   initGUI(plane) {
-    const gui = new dat.GUI();
+    const gui = new GUI();
 
     gui.add(plane.material.uniforms.hoverRadius, 'value', 0, 1).name('radius');
     gui

@@ -40,14 +40,14 @@ export const color = {
   ...baseColors,
   ...primaryColors,
   ...secondaryColors,
-};
+}
 
-export const fontFamily = {};
+export const fontFamily = {}
 
 export const fontSize = {
   inherit: 'inherit',
   initial: 'initial',
-};
+}
 
 export const fontStyle = {
   inherit: 'inherit',
@@ -55,7 +55,7 @@ export const fontStyle = {
   italic: 'italic',
   normal: 'normal',
   oblique: 'oblique',
-};
+}
 
 export const fontWeight = {
   black: '900',
@@ -68,7 +68,7 @@ export const fontWeight = {
   medium: '500',
   normal: '400',
   thin: '100',
-};
+}
 
 export const grid = {
   columnWidth: columnWidth, // 80
@@ -77,7 +77,7 @@ export const grid = {
   outerSpacing: baseValue * 3, // 24
   sectionSpacing: baseValue * 10, // 80
   totalColumns: columns, // 17
-};
+}
 
 export const size = {
   lg: sizing[5],
@@ -89,7 +89,7 @@ export const size = {
   xxs: sizing[1],
   xxxl: sizing[8],
   xxxs: sizing[0],
-};
+}
 
 export default {
   color,
@@ -99,4 +99,4 @@ export default {
   fontWeight,
   grid,
   size,
-};
+}
